@@ -1,6 +1,5 @@
 from flask import Flask, jsonify, request
 from data import data
-import urllib.parse
 
 app = Flask(__name__)
 
@@ -8,7 +7,7 @@ app = Flask(__name__)
 def index():
     return jsonify({
         "data": data,
-        "message": "success"
+        "status": "success"
     }), 200
 
 @app.route("/star")
